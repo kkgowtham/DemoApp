@@ -23,16 +23,16 @@ class MainActivity : AppCompatActivity() {
             var b:String=mPassword.text.toString()
 
             if(a.isNotEmpty() && b.isNotEmpty()){
-                if (a == b && a == "admin"){
+                if (a == "admin"){
                     SessionManager.save(applicationContext,a,b,true)
-                }else if (a == b){
+                }else{
                     SessionManager.save(applicationContext,a,b,false)
                 }
                 val intent = Intent(this,HomeActivity::class.java)
                 //intent.putExtra("isAdmin",false)
                 startActivity(intent)
             }else{
-                Toast.makeText(applicationContext,"Invalid user or password",Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext,"Invalid credentials",Toast.LENGTH_LONG).show()
             }
         }
     }
