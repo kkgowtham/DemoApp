@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item android:title="Shop By Category">
+<menu>
+<group
+    android:id="@+id/group1"
+    android:checkableBehavior="single">
+     <item
+         android:icon="@drawable/ic_library_books_black_24dp"
+        android:id="@+id/books_menu"
+        android:title="@string/books"
+        />
+    <item
+        android:icon="@drawable/ic_pages_black_24dp"
+        android:id="@+id/clothing_menu"
+        android:title="@string/clothing"/>
+    <item
+        android:icon="@drawable/ic_tv_black_24dp"
+        android:id="@+id/electronics_menu"
+        android:title="@string/electronics"/>
+    <item
+        android:icon="@drawable/ic_local_grocery_store_black_24dp"
+        android:id="@+id/grocery_menu"
+        android:title="@string/grocery"/>
+    <item
+        android:icon="@drawable/ic_golf_course_black_24dp"
+        android:id="@+id/sports_menu"
+        android:title="@string/sports"
+        />
+</group>
+    <group>
+        <item
+            android:icon="@drawable/ic_power_settings_new_black_24dp"
+            android:id="@+id/logout_btn"
+            android:title="Logout"/>
+    </group>
+</menu>
+</item>
+</menu>
