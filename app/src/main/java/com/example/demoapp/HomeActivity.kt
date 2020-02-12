@@ -79,6 +79,12 @@ class HomeActivity : AppCompatActivity(),NavigationView.OnNavigationItemSelected
     fun initializeViews(){
         val toolbar: Toolbar =findViewById(R.id.toolbar)
         fab=findViewById(R.id.fab_goto_cart)
+        if(SessionManager.getUserName(applicationContext)=="admin")
+        {
+            fab.visibility=View.INVISIBLE
+        }else{
+            fab.visibility=View.VISIBLE
+        }
         fab.setOnClickListener{
             startActivity(Intent(this,CartActivity::class.java))
         }
